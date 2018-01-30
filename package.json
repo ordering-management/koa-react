@@ -122,6 +122,6 @@
     "extends": "react-app"
   },
   "theme": {
-    "brand-primary": "#dd2627"
+    "primary-color": "#1890ff"
   }
 }

@@ -11,8 +11,8 @@ const routes = [
     component: AsyncComponent(() => require('./home')),
     routes: [
       {
-        path: '/home/home',
-        component: AsyncComponent(() => require('./home')),
+        path: '/home/list/:key',
+        component: AsyncComponent(() => require('./list')),
       }
     ]
   }
