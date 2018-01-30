@@ -1,7 +1,46 @@
 import { Map, fromJS } from 'immutable';
 
 const initState = Map({
-  menu: [],
+  menu: [{
+    key: '1',
+    name: '首页',
+    iconType: 'dashboard',
+    path: '/home/dashboard',
+    permission: 'can_view_dashboard_menu',
+    // items: [
+    //   {
+    //     key: '2',
+    //     type: 'list',
+    //     name: '分析页',
+    //   },
+    //   {
+    //     key: '3',
+    //     type: 'list',
+    //     name: '监控页',
+    //   },
+    //   {
+    //     key: '4',
+    //     type: 'list',
+    //     name: '工作台',
+    //   }]
+  }, {
+    key: '2',
+    name: '客户管理',
+    iconType: 'user',
+    path: '/home/customer',
+    permission: 'can_view_customer_menu',
+    items: [
+      {
+        key: '3',
+        type: 'list',
+        name: '线索管理',
+      },
+      {
+        key: '4',
+        type: 'list',
+        name: '客户回访',
+      }]
+  }],
   tabs: [{
       key: '1',
       name: '首页',

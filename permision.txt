@@ -1,0 +1,2 @@
+can_view_dashboard_menu
+can_view_customer_menu

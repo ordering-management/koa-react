@@ -42,11 +42,11 @@ function* menuClick(action) {
     }
   }
 
-  const filterItem = tabs.filter(x => x.key === selectItem.key);
-  if (filterItem.length === 0) {
-    tabs.push(selectItem);
-  }
-  yield put({ type: 'system/changeTabs', payload: tabs });
-  yield put({ type: 'system/changeTabActiveKey', payload: selectItem.key });
-  yield put(push(`/home/list/${selectItem.key}`));
+  // const filterItem = tabs.filter(x => x.key === selectItem.key);
+  // if (filterItem.length === 0) {
+  //   tabs.push(selectItem);
+  // }
+  // yield put({ type: 'system/changeTabs', payload: tabs });
+  // yield put({ type: 'system/changeTabActiveKey', payload: selectItem.key });
+  yield put(push(selectItem.path));
 }

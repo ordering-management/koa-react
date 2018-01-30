@@ -1,12 +1,13 @@
 require('babel-core/register')({
-    "presets": [
-        "es2015",
-        "es2016",
-        "stage-2"
-    ],
-    "plugins": [
-        "transform-runtime"
-    ]
+  "presets": [
+    "es2015",
+    "es2016",
+    "stage-1",
+    "stage-2"
+  ],
+  "plugins": [
+    "transform-runtime"
+  ]
 });
 
 //Node babel source map support
@@ -14,36 +15,49 @@ require('source-map-support').install();
 // var views = require('koa-views');
 
 const webpack = require('webpack'),
-    convert = require('koa-convert'),
-    fs = require('fs'),
-    path = require('path'),
-    devMiddleware = require('koa-webpack-dev-middleware'),
-    hotMiddleware = require('koa-webpack-hot-middleware'),
-    config = require('../config/webpack.config.dev.js'),
-    clientRoute = require('../server/middlewares/clientRoute.js'),
-    views = require('koa-views'),
-    compiler = webpack(config);
+  convert = require('koa-convert'),
+  fs = require('fs'),
+  path = require('path'),
+  devMiddleware = require('koa-webpack-dev-middleware'),
+  hotMiddleware = require('koa-webpack-hot-middleware'),
+  config = require('../config/webpack.config.dev.js'),
+  clientRoute = require('../server/middlewares/clientRoute.js'),
+  views = require('koa-views'),
+  log4js = require('log4js'),
+  compiler = webpack(config);
+
 
 // Webpack hook event to write html file into `/views/dev` from `/views/tpl` due to server render
 compiler.plugin('emit', (compilation, callback) => {
-    const assets = compilation.assets;
-    let file, data;
-    Object.keys(assets).forEach(key => {
-        if (key.match(/\.html$/)) {
-            file = path.resolve(__dirname, key);
-            data = assets[key].source();
-            fs.writeFileSync(file, data);
-        }
-    });
-    callback();
+  const assets = compilation.assets;
+  let file, data;
+  Object.keys(assets).forEach(key => {
+    if (key.match(/\.html$/)) {
+      file = path.resolve(__dirname, key);
+      data = assets[key].source();
+      fs.writeFileSync(file, data);
+    }
+  });
+  callback();
 });
 
 var app = require('./app.js').default;
 
+// var logger = log4js.getLogger();
+// logger.level = 'debug';
+//
+// logger.trace('Entering cheese testing');
+// logger.debug('Got cheese.');
+// logger.info('Cheese is Gouda.');
+// logger.warn('Cheese is quite smelly.');
+// logger.error('Cheese is too ripe!');
+// logger.fatal('Cheese was breeding ground for listeria.');
+console.log(app);
+
 app.use(views(path.resolve(__dirname, '../views/dev'), { map: { html: 'ejs' } }))
 app.use(convert(devMiddleware(compiler, {
-    noInfo: true,
-    publicPath: config.output.publicPath
+  noInfo: true,
+  publicPath: config.output.publicPath
 })));
 
 app.use(clientRoute.default);

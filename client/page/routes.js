@@ -13,6 +13,10 @@ const routes = [
       {
         path: '/home/list/:key',
         component: AsyncComponent(() => require('./list')),
+      },
+      {
+        path: '/home/customer',
+        component: AsyncComponent(() => require('./customer/list')),
       }
     ]
   }
