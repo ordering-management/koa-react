@@ -85,7 +85,7 @@ class CustomerList extends PureComponent {
           {this.renderForm()}
         </div>
         <div className={styles.tableListOperator}>
-          <Button icon="plus" type="primary" onClick={() => history.push('/home/customer/edit')}>新建</Button>
+          <Button icon="plus" type="primary">新建</Button>
         </div>
         <Table rowKey={(record) => record.sid}
                scroll={{ x: 1300 }}

@@ -3,6 +3,7 @@ import customer from '../controllers/customer.js';
 
 const router = new Router({ prefix: '/customer' });
 
-router.get('/list', customer.getList);
+router.post('/', customer.getList);
+router.put('/:id', customer.submit);
 
 export default router;

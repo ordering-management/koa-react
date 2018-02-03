@@ -2,8 +2,18 @@ import {fork, takeEvery } from 'redux-saga/effects';
 import {
   watchMenuClick,
   watchTabChange,
-  watchFetchMenu
+  watchFetchMenu,
+  watchTabRemove
 } from './model/system/sagas';
+import {
+  watchInitList,
+  watchFetchListData,
+  watchListActionClick
+} from './model/list/sagas';
+import {
+  watchEditInit,
+  watchSubmitEdit
+} from './model/edit/sagas';
 
 function* watchAndLog() {
   // eslint-disable-next-line
@@ -19,5 +29,11 @@ export default function* rootSaga() {
   yield fork(watchFetchMenu);
   yield fork(watchMenuClick);
   yield fork(watchTabChange);
+  yield fork(watchTabRemove);
+  yield fork(watchInitList);
+  yield fork(watchFetchListData);
+  yield fork(watchListActionClick);
+  yield fork(watchEditInit);
+  yield fork(watchSubmitEdit);
 // }
 }

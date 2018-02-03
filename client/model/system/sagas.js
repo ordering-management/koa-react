@@ -1,5 +1,7 @@
 import { takeEvery, put, call, select, fork } from 'redux-saga/effects';
-import { fetchMenuRequest } from '../../service/system';
+import {
+  fetchMenuRequest,
+} from '../../service/system';
 import { push } from 'react-router-redux';
 
 export const watchFetchMenu = function*() {
@@ -19,7 +21,7 @@ export const watchTabChange = function*() {
 
 function* tabChange(action) {
   yield put({ type: 'system/changeTabActiveKey', payload: action.payload });
-  yield put(push(`/home/list/${action.payload}`));
+  yield put(push(`/home/${action.payload}`));
 }
 
 export const watchMenuClick = function*() {
@@ -29,7 +31,7 @@ export const watchMenuClick = function*() {
 function* menuClick(action) {
   const systemReducer = yield select(x => x.get('system'));
   const menu = systemReducer.get('menu');
-  const tabs = systemReducer.get('tabs');
+  let tabs = systemReducer.get('tabs');
   const keyPath = action.payload;
   var selectItem = {};
   var currentLevelMenu = menu;
@@ -42,11 +44,45 @@ function* menuClick(action) {
     }
   }
 
-  // const filterItem = tabs.filter(x => x.key === selectItem.key);
-  // if (filterItem.length === 0) {
-  //   tabs.push(selectItem);
-  // }
-  // yield put({ type: 'system/changeTabs', payload: tabs });
-  // yield put({ type: 'system/changeTabActiveKey', payload: selectItem.key });
-  yield put(push(selectItem.path));
+  yield call(addTabs, selectItem);
+}
+
+export const addTabs = function*(tab) {
+  const systemReducer = yield select(x => x.get('system'));
+  let tabs = systemReducer.get('tabs');
+  const filterItem = tabs.filter(x => x.key === tab.key && x.type === tab.type);
+  if (filterItem.size === 0) {
+    tabs = tabs.push(tab);
+  }
+  yield put({ type: 'system/changeTabs', payload: tabs });
+  yield put({ type: 'system/changeTabActiveKey', payload: tab.type + '/' + tab.key });
+  yield put(push(`/home/${tab.type}/${tab.key}`));
+}
+
+export const getActiveTab = function* () {
+  const systemReducer = yield select(x => x.get('system'));
+  let tabs = systemReducer.get('tabs');
+  let tabActiveKey = systemReducer.get('tabActiveKey');
+  const filterTables = tabs.filter(x => x.type + '/' + x.key === tabActiveKey);
+  return filterTables.get('0');
+}
+
+export const watchTabRemove = function* () {
+  yield takeEvery('system/tabRemove', removeTab);
+}
+
+function* removeTab(action) {
+  const systemReducer = yield select(x => x.get('system'));
+  let tabs = systemReducer.get('tabs');
+  let tabActiveKey = systemReducer.get('tabActiveKey');
+  const index = tabs.findIndex(x => x.type + '/' + x.key === action.payload);
+  if (index !== undefined) {
+    tabs = tabs.delete(index);
+  }
+  yield put({ type: 'system/changeTabs', payload: tabs });
+  if (action.payload === tabActiveKey) {
+    const selectItem = tabs.get(index - 1);
+    yield put({ type: 'system/changeTabActiveKey', payload: selectItem.type + '/' +selectItem.key });
+    yield put(push(`/home/${selectItem.type}/${selectItem.key}`));
+  }
 }

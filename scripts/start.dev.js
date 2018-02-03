@@ -52,14 +52,12 @@ var app = require('./app.js').default;
 // logger.warn('Cheese is quite smelly.');
 // logger.error('Cheese is too ripe!');
 // logger.fatal('Cheese was breeding ground for listeria.');
-console.log(app);
 
 app.use(views(path.resolve(__dirname, '../views/dev'), { map: { html: 'ejs' } }))
 app.use(convert(devMiddleware(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath
 })));
-
 app.use(clientRoute.default);
 app.use(convert(hotMiddleware(compiler)));
 

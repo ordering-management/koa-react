@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { Layout, Menu, Icon, Button, Tabs } from 'antd';
 import { connect } from 'react-redux';
-import Permission from '../../domain/Permission';
 
 const { Header, Footer, Sider, Content } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -16,9 +15,9 @@ class home extends Component {
   constructor(props) {
     super(props);
 
-    // props.dispatch({
-    //   type: 'system/fetchMenu'
-    // })
+    props.dispatch({
+      type: 'system/fetchMenu'
+    })
   }
 
   renderMenu(menus) {
@@ -26,8 +25,8 @@ class home extends Component {
       const title = <span>{item.iconType && <Icon type={item.iconType} />}<span>{item.name}</span></span>
       if (item.items && item.items.length > 0) {
         return <SubMenu key={index} title={title}>
-            {this.renderMenu(item.items)}
-          </SubMenu>
+          {this.renderMenu(item.items)}
+        </SubMenu>
       } else {
         return <Menu.Item key={index}>{title}</Menu.Item>
       }
@@ -42,22 +41,26 @@ class home extends Component {
     });
   }
 
-  // onTabChange(activeKey) {
-  //   const { dispatch } = this.props;
-  //   dispatch({
-  //     type: 'system/tabChange',
-  //     payload: activeKey
-  //   });
-  // }
-  //
-  // onTabEdit(targetKey, action) {
-  //   console.log(targetKey);
-  //   console.log(action);
-  // }
+  onTabChange(activeKey) {
+    const { dispatch } = this.props;
+    dispatch({
+      type: 'system/tabChange',
+      payload: activeKey
+    });
+  }
+
+  onTabEdit(targetKey, action) {
+    if (action === 'remove') {
+      this.props.dispatch({
+        type: 'system/tabRemove',
+        payload: targetKey
+      });
+    }
+  }
 
   render() {
     const { tabs, tabActiveKey, menu, match } = this.props;
-    return <Layout>
+    return <Layout style={{ minHeight: '100vh' }}>
       <Sider
         trigger={null}
         collapsible
@@ -78,6 +81,13 @@ class home extends Component {
       </Sider>
       <Layout>
         <Header className={styles.header}>
+          <Tabs type="editable-card"
+                hideAdd
+                onEdit={(targetKey, action) => this.onTabEdit(targetKey, action)}
+                activeKey={tabActiveKey}
+                onChange={(activeKey) => this.onTabChange(activeKey)}>
+            {tabs && tabs.map((item) => <TabPane tab={item.name} key={item.type + '/' + item.key} closable={! item.hideClose} />)}
+          </Tabs>
         </Header>
         <Content style={{ minHeight: '280px' }}>{renderRoutes(this.props.route.routes)}</Content>
         <Footer></Footer>

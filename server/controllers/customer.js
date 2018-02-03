@@ -1,31 +1,31 @@
+import { getCustomer, addCustomer } from '../service/customer';
 async function getList(ctx) {
-
+  const result = await getCustomer();
   ctx.body = {
     status: '1',
-    data: [{
-      key: '1',
-      name: '首页',
-      iconType: 'dashboard',
-      items: [
-        {
-          key: '2',
-          type: 'list',
-          name: '分析页',
-        },
-        {
-          key: '3',
-          type: 'list',
-          name: '监控页',
-        },
-        {
-          key: '4',
-          type: 'list',
-          name: '工作台',
-        }]
-    }]
+    data: result
+  }
+}
+
+async function submit(ctx) {
+  const id = ctx.params.id;
+  console.log(ctx.request.body);
+  if (id === '-1') {
+    //add customer
+    const result = await addCustomer(ctx.request.body);
+    ctx.body = {
+      status: '1',
+      data: result
+    }
+  } else {
+    // update customer
+    ctx.body = {
+      status: '1',
+    }
   }
 }
 
 export default {
-  getList
+  getList,
+  submit
 }

@@ -1,135 +1,90 @@
 import styles from './index.less';
 import React, { PureComponent } from 'react';
 import { Table, Button, Card } from 'antd';
+import { connect } from 'react-redux';
 
-const listMapping = {
-  1: {
-    table_columns: [
-      {
-        title: '姓名',
-        dataIndex: 'smingcheng',
-        width: 100,
-        fixed: 'left'
-      },
-      {
-        title: '会员号',
-        dataIndex: 'sshouji',
-      }, {
-        title: '会员角色',
-        dataIndex: 'hystatusname',
-      },],
-    actions: [
-      { title: '审核', action: '/api/approve' }
-    ],
-    source: '/api/customers'
-  },
-  2: {
-    table_columns: [
-      {
-        title: '姓名',
-        dataIndex: 'smingcheng',
-        width: 100,
-        fixed: 'left'
-      },
-      {
-        title: '推荐人',
-        dataIndex: 'stuijianren',
-      }],
-    actions: [
-      { title: '审核', action: '/api/approve' }
-    ],
-    source: '/api/customers'
-  },
-  3: {
-    table_columns: [
-      {
-        title: '姓名',
-        dataIndex: 'smingcheng',
-        width: 100,
-        fixed: 'left'
-      },
-      {
-        title: '手机号',
-        dataIndex: 'sshouji',
-      }, {
-        title: '会员角色',
-        dataIndex: 'hystatusname',
-      }],
-    actions: [
-      { title: '审核', action: '/api/approve' }
-    ],
-    source: '/api/customers'
-  },
-  4: {
-    table_columns: [
-      {
-        title: '姓名',
-        dataIndex: 'smingcheng',
-        width: 100,
-        fixed: 'left'
-      },
-      {
-        title: '手机号',
-        dataIndex: 'sshouji',
-      }, {
-        title: '会员角色',
-        dataIndex: 'hystatusname',
-      },{
-        title: '手机号',
-        dataIndex: 'sshouji',
-      }, {
-        title: '会员角色',
-        dataIndex: 'hystatusname',
-      },{
-        title: '手机号',
-        dataIndex: 'sshouji',
-      }, {
-        title: '会员角色',
-        dataIndex: 'hystatusname',
-      }],
-    actions: [
-      { title: '审核', action: '/api/approve' }
-    ],
-    source: '/api/customers'
-  }
-}
-
-class home extends PureComponent {
+class List extends PureComponent {
   constructor(props) {
     super(props);
+
+    props.dispatch({
+      type: 'list/initList',
+      payload: props.match.params.key
+    });
   }
 
   componentWillReceiveProps(newProps) {
-    console.log(newProps.match.params.key);
+    if (newProps.match.params.key !== this.props.match.params.key) {
+      this.props.dispatch({
+        type: 'list/initList',
+        payload: newProps.match.params.key
+      });
+    }
+  }
+
+  actionButtonClick(item) {
+    this.props.dispatch({
+      type: 'list/actionClick',
+      payload: item,
+      key: this.props.match.params.key
+    })
   }
 
   render() {
+    const { cache, dispatch, match } = this.props;
+    if (! cache) {
+      return null;
+    }
     const key = parseInt(this.props.match.params.key);
     const paginationProps = {
       current: 1,
       pageSize: 10,
       total: 100,
     };
+
+    // rowSelection object indicates the need for row selection
+    const rowSelection = {
+      selectedRowKeys: cache.get('selectedRowKeys'),
+      onChange: (selectedRowKeys, selectedRows) => {
+        dispatch({
+          type: 'list/rowSelectionChange',
+          payload: {
+            key: match.params.key,
+            selectedRowKeys,
+            selectedRows
+          }
+        });
+      },
+      getCheckboxProps: record => ({
+        disabled: record.name === 'Disabled User', // Column configuration not to be checked
+      }),
+    };
+
     return <Card style={{ margin: '20px 30px' }}>
       <div className={styles.tableList}>
         <div className={styles.tableListOperator}>
           <Button.Group>
-            <Button>浏览</Button>
-            <Button>增加</Button>
-            <Button>修改</Button>
             {
-              listMapping[key].actions && listMapping[key].actions.map((item, index) => <Button key={index}>{item.title}</Button>)
+              cache.get('actions').map((item, index) => <Button key={index} onClick={() => this.actionButtonClick(item)}>{item.title}</Button>)
             }
           </Button.Group>
         </div>
         <Table rowKey={(record, index) => index}
                scroll={{ x: 1300 }}
-               columns={listMapping[key].table_columns}
-               dataSource={[]}
-               pagination={paginationProps} />
+               columns={cache.get('table_columns')}
+               dataSource={cache.get('data') || []}
+               pagination={paginationProps}
+               rowSelection={rowSelection} />
       </div>
     </Card>;
   }
 }
 
-export default home;
+function matchStateToProps(state, props) {
+  const listCache = state.get('listCache');
+  return {
+    cache: listCache.get(props.match.params.key)
+  }
+}
+
+export default connect(matchStateToProps)(List);

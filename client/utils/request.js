@@ -9,7 +9,6 @@ const CORS_SIMPLE_METHODS = ['GET', 'HEAD'];
 
 export const request = (url, options = {}) => {
   const finalOptions = { ...options, ...getDefaultFetchOpts(options, '1') };
-
   return new Promise((resolve, reject) => {
     const onTimeout = () => reject(new FetchTimeOutError(`调用 ${url} 时间太长!`));
     const timeout = setTimeout(onTimeout, 200000);
@@ -36,6 +35,7 @@ function getDefaultFetchOpts(options, token) {
     {
       headers: {
         ...options.headers,
+        'Content-Type': 'application/json; charset=utf-8',
         Accept: 'application/json; charset=utf-8',
       }
     }
