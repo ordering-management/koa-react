@@ -17,9 +17,9 @@ function* initList(action) {
     const response = yield call(fetchListConfig, action.payload);
     if (response.status === '1') {
       yield put({ type: 'list/updateListConfig', payload: { key: action.payload, config: response.data } });
-      yield call(fetchListData, action);
     }
   }
+  yield call(fetchListData, action);
 }
 
 export const watchFetchListData = function*() {
@@ -35,7 +35,7 @@ function* fetchListData(action) {
   }
 }
 
-export const watchListActionClick = function* () {
+export const watchListActionClick = function*() {
   yield takeEvery('list/actionClick', actionClick);
 }
 
@@ -50,7 +50,7 @@ function* actionClick(action) {
       message.warn('请选择数据！');
       return;
     }
+    yield put({ type: 'detail/changeId', payload: selectedItems[selectedItems.length - 1].id });
     yield call(addTabs, { name: action.payload.title + activeTab.name, type: 'detail', key: activeTab.key });
-    yield put({type: 'detail/changeId', payload: selectedItems[selectedItems.length - 1]});
   }
 }

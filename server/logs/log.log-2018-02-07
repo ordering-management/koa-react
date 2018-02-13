@@ -1,0 +1,1302 @@
+[2018-02-07T16:46:59.750] [ERROR] default - { SequelizeDatabaseError: Table 'test.opportunities' doesn't exist
+    at Query.formatError (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:228:16)
+    at Query.connection.query [as onResult] (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:55:23)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:30:12)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+From previous event:
+    at Query.run (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:44:12)
+    at retry (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:32)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:39:21
+    at retryAsPromised (D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:29:10)
+    at Promise.try.then.connection (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:14)
+From previous event:
+    at Sequelize.query (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:540:8)
+    at QueryInterface.select (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\query-interface.js:1099:27)
+    at Promise.try.then.then.then (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1598:34)
+    at runCallback (timers.js:785:20)
+    at tryOnImmediate (timers.js:747:5)
+    at processImmediate [as _immediateCallback] (timers.js:718:5)
+From previous event:
+    at Function.findAll (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1595:8)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:6:45)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getOpportunity (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:4:14)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/controllers/opportunity.js:3:24)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getList (D:\Keven Wang\koa\ordering\koa-react\server\controllers\opportunity.js:42:17)
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:45:18)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+  name: 'SequelizeDatabaseError',
+  parent: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  original: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' }
+[2018-02-07T16:47:35.946] [ERROR] default - { SequelizeDatabaseError: Table 'test.opportunities' doesn't exist
+    at Query.formatError (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:228:16)
+    at Query.connection.query [as onResult] (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:55:23)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:30:12)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+From previous event:
+    at Query.run (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:44:12)
+    at retry (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:32)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:39:21
+    at retryAsPromised (D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:29:10)
+    at Promise.try.then.connection (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:14)
+From previous event:
+    at Sequelize.query (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:540:8)
+    at QueryInterface.insert (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\query-interface.js:901:27)
+    at Promise.try.then.then.then (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:3642:56)
+    at runCallback (timers.js:785:20)
+    at tryOnImmediate (timers.js:747:5)
+    at processImmediate [as _immediateCallback] (timers.js:718:5)
+From previous event:
+    at model.save (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:3618:8)
+    at Function.create (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:2026:8)
+    at _callee2$ (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:15:39)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at addOpportunity (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:13:14)
+    at _callee2$ (D:/Keven Wang/koa/ordering/koa-react/server/controllers/opportunity.js:15:26)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at submit (D:\Keven Wang\koa\ordering\koa-react\server\controllers\opportunity.js:90:18)
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:45:18)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-router\lib\router.js:345:16
+  name: 'SequelizeDatabaseError',
+  parent: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'INSERT INTO `Opportunities` (`id`,`customername`,`name`,`address`,`industry`,`createdAt`,`updatedAt`) VALUES (DEFAULT,\'王友生\',\'王友生的商机\',\'江苏徐州泉山区\',\'it行业\',\'2018-02-07 08:47:35\',\'2018-02-07 08:47:35\');' },
+  original: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'INSERT INTO `Opportunities` (`id`,`customername`,`name`,`address`,`industry`,`createdAt`,`updatedAt`) VALUES (DEFAULT,\'王友生\',\'王友生的商机\',\'江苏徐州泉山区\',\'it行业\',\'2018-02-07 08:47:35\',\'2018-02-07 08:47:35\');' },
+  sql: 'INSERT INTO `Opportunities` (`id`,`customername`,`name`,`address`,`industry`,`createdAt`,`updatedAt`) VALUES (DEFAULT,\'王友生\',\'王友生的商机\',\'江苏徐州泉山区\',\'it行业\',\'2018-02-07 08:47:35\',\'2018-02-07 08:47:35\');' }
+[2018-02-07T16:48:59.651] [ERROR] default - { SequelizeDatabaseError: Table 'test.opportunities' doesn't exist
+    at Query.formatError (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:228:16)
+    at Query.connection.query [as onResult] (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:55:23)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:30:12)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+From previous event:
+    at Query.run (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:44:12)
+    at retry (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:32)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:39:21
+    at retryAsPromised (D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:29:10)
+    at Promise.try.then.connection (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:14)
+From previous event:
+    at Sequelize.query (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:540:8)
+    at QueryInterface.select (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\query-interface.js:1099:27)
+    at Promise.try.then.then.then (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1598:34)
+    at runCallback (timers.js:785:20)
+    at tryOnImmediate (timers.js:747:5)
+    at processImmediate [as _immediateCallback] (timers.js:718:5)
+From previous event:
+    at Function.findAll (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1595:8)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:6:45)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getOpportunity (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:4:14)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/controllers/opportunity.js:3:24)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getList (D:\Keven Wang\koa\ordering\koa-react\server\controllers\opportunity.js:42:17)
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:45:18)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+  name: 'SequelizeDatabaseError',
+  parent: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  original: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' }
+[2018-02-07T16:49:02.426] [ERROR] default - { SequelizeDatabaseError: Table 'test.opportunities' doesn't exist
+    at Query.formatError (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:228:16)
+    at Query.connection.query [as onResult] (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:55:23)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:30:12)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+From previous event:
+    at Query.run (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:44:12)
+    at retry (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:32)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:39:21
+    at retryAsPromised (D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:29:10)
+    at Promise.try.then.connection (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:14)
+From previous event:
+    at Sequelize.query (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:540:8)
+    at QueryInterface.select (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\query-interface.js:1099:27)
+    at Promise.try.then.then.then (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1598:34)
+    at runCallback (timers.js:785:20)
+    at tryOnImmediate (timers.js:747:5)
+    at processImmediate [as _immediateCallback] (timers.js:718:5)
+From previous event:
+    at Function.findAll (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1595:8)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:6:45)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getOpportunity (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:4:14)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/controllers/opportunity.js:3:24)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getList (D:\Keven Wang\koa\ordering\koa-react\server\controllers\opportunity.js:42:17)
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:45:18)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+  name: 'SequelizeDatabaseError',
+  parent: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  original: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' }
+[2018-02-07T16:49:05.034] [ERROR] default - { SequelizeDatabaseError: Table 'test.opportunities' doesn't exist
+    at Query.formatError (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:228:16)
+    at Query.connection.query [as onResult] (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:55:23)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:30:12)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+From previous event:
+    at Query.run (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:44:12)
+    at retry (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:32)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:39:21
+    at retryAsPromised (D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:29:10)
+    at Promise.try.then.connection (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:14)
+From previous event:
+    at Sequelize.query (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:540:8)
+    at QueryInterface.select (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\query-interface.js:1099:27)
+    at Promise.try.then.then.then (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1598:34)
+    at runCallback (timers.js:785:20)
+    at tryOnImmediate (timers.js:747:5)
+    at processImmediate [as _immediateCallback] (timers.js:718:5)
+From previous event:
+    at Function.findAll (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1595:8)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:6:45)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getOpportunity (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:4:14)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/controllers/opportunity.js:3:24)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getList (D:\Keven Wang\koa\ordering\koa-react\server\controllers\opportunity.js:42:17)
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:45:18)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+  name: 'SequelizeDatabaseError',
+  parent: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  original: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' }
+[2018-02-07T16:49:07.290] [ERROR] default - { SequelizeDatabaseError: Table 'test.opportunities' doesn't exist
+    at Query.formatError (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:228:16)
+    at Query.connection.query [as onResult] (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:55:23)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:30:12)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+From previous event:
+    at Query.run (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:44:12)
+    at retry (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:32)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:39:21
+    at retryAsPromised (D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:29:10)
+    at Promise.try.then.connection (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:14)
+From previous event:
+    at Sequelize.query (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:540:8)
+    at QueryInterface.select (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\query-interface.js:1099:27)
+    at Promise.try.then.then.then (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1598:34)
+    at runCallback (timers.js:785:20)
+    at tryOnImmediate (timers.js:747:5)
+    at processImmediate [as _immediateCallback] (timers.js:718:5)
+From previous event:
+    at Function.findAll (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1595:8)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:6:45)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getOpportunity (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:4:14)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/controllers/opportunity.js:3:24)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getList (D:\Keven Wang\koa\ordering\koa-react\server\controllers\opportunity.js:42:17)
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:45:18)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+  name: 'SequelizeDatabaseError',
+  parent: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  original: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' }
+[2018-02-07T16:49:48.141] [ERROR] default - { SequelizeDatabaseError: Table 'test.opportunities' doesn't exist
+    at Query.formatError (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:228:16)
+    at Query.connection.query [as onResult] (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:55:23)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:30:12)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+From previous event:
+    at Query.run (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:44:12)
+    at retry (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:32)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:39:21
+    at retryAsPromised (D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:29:10)
+    at Promise.try.then.connection (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:14)
+From previous event:
+    at Sequelize.query (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:540:8)
+    at QueryInterface.insert (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\query-interface.js:901:27)
+    at Promise.try.then.then.then (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:3642:56)
+    at runCallback (timers.js:785:20)
+    at tryOnImmediate (timers.js:747:5)
+    at processImmediate [as _immediateCallback] (timers.js:718:5)
+From previous event:
+    at model.save (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:3618:8)
+    at Function.create (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:2026:8)
+    at _callee2$ (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:15:39)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at addOpportunity (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:13:14)
+    at _callee2$ (D:/Keven Wang/koa/ordering/koa-react/server/controllers/opportunity.js:15:26)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at submit (D:\Keven Wang\koa\ordering\koa-react\server\controllers\opportunity.js:90:18)
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:45:18)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-router\lib\router.js:345:16
+  name: 'SequelizeDatabaseError',
+  parent: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'INSERT INTO `Opportunities` (`id`,`customername`,`name`,`address`,`industry`,`createdAt`,`updatedAt`) VALUES (DEFAULT,\'王友生\',\'王友生的商机\',\'徐州泉山区\',\'it行业\',\'2018-02-07 08:49:48\',\'2018-02-07 08:49:48\');' },
+  original: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'INSERT INTO `Opportunities` (`id`,`customername`,`name`,`address`,`industry`,`createdAt`,`updatedAt`) VALUES (DEFAULT,\'王友生\',\'王友生的商机\',\'徐州泉山区\',\'it行业\',\'2018-02-07 08:49:48\',\'2018-02-07 08:49:48\');' },
+  sql: 'INSERT INTO `Opportunities` (`id`,`customername`,`name`,`address`,`industry`,`createdAt`,`updatedAt`) VALUES (DEFAULT,\'王友生\',\'王友生的商机\',\'徐州泉山区\',\'it行业\',\'2018-02-07 08:49:48\',\'2018-02-07 08:49:48\');' }
+[2018-02-07T16:49:56.066] [ERROR] default - { SequelizeDatabaseError: Table 'test.opportunities' doesn't exist
+    at Query.formatError (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:228:16)
+    at Query.connection.query [as onResult] (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:55:23)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:30:12)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+From previous event:
+    at Query.run (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:44:12)
+    at retry (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:32)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:39:21
+    at retryAsPromised (D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:29:10)
+    at Promise.try.then.connection (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:14)
+From previous event:
+    at Sequelize.query (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:540:8)
+    at QueryInterface.select (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\query-interface.js:1099:27)
+    at Promise.try.then.then.then (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1598:34)
+    at runCallback (timers.js:785:20)
+    at tryOnImmediate (timers.js:747:5)
+    at processImmediate [as _immediateCallback] (timers.js:718:5)
+From previous event:
+    at Function.findAll (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1595:8)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:6:45)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getOpportunity (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:4:14)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/controllers/opportunity.js:3:24)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getList (D:\Keven Wang\koa\ordering\koa-react\server\controllers\opportunity.js:42:17)
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:45:18)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+  name: 'SequelizeDatabaseError',
+  parent: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  original: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' }
+[2018-02-07T16:49:56.873] [ERROR] default - { SequelizeDatabaseError: Table 'test.opportunities' doesn't exist
+    at Query.formatError (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:228:16)
+    at Query.connection.query [as onResult] (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:55:23)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:30:12)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+From previous event:
+    at Query.run (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:44:12)
+    at retry (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:32)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:39:21
+    at retryAsPromised (D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:29:10)
+    at Promise.try.then.connection (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:14)
+From previous event:
+    at Sequelize.query (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:540:8)
+    at QueryInterface.select (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\query-interface.js:1099:27)
+    at Promise.try.then.then.then (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1598:34)
+    at runCallback (timers.js:785:20)
+    at tryOnImmediate (timers.js:747:5)
+    at processImmediate [as _immediateCallback] (timers.js:718:5)
+From previous event:
+    at Function.findAll (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1595:8)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:6:45)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getOpportunity (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:4:14)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/controllers/opportunity.js:3:24)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getList (D:\Keven Wang\koa\ordering\koa-react\server\controllers\opportunity.js:42:17)
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:45:18)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+  name: 'SequelizeDatabaseError',
+  parent: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  original: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' }
+[2018-02-07T16:49:59.051] [ERROR] default - { SequelizeDatabaseError: Table 'test.opportunities' doesn't exist
+    at Query.formatError (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:228:16)
+    at Query.connection.query [as onResult] (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:55:23)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:30:12)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+From previous event:
+    at Query.run (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:44:12)
+    at retry (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:32)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:39:21
+    at retryAsPromised (D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:29:10)
+    at Promise.try.then.connection (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:14)
+From previous event:
+    at Sequelize.query (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:540:8)
+    at QueryInterface.select (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\query-interface.js:1099:27)
+    at Promise.try.then.then.then (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1598:34)
+    at runCallback (timers.js:785:20)
+    at tryOnImmediate (timers.js:747:5)
+    at processImmediate [as _immediateCallback] (timers.js:718:5)
+From previous event:
+    at Function.findAll (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1595:8)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:6:45)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getOpportunity (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:4:14)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/controllers/opportunity.js:3:24)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getList (D:\Keven Wang\koa\ordering\koa-react\server\controllers\opportunity.js:42:17)
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:45:18)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+  name: 'SequelizeDatabaseError',
+  parent: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  original: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' }
+[2018-02-07T16:50:05.803] [ERROR] default - { SequelizeDatabaseError: Table 'test.opportunities' doesn't exist
+    at Query.formatError (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:228:16)
+    at Query.connection.query [as onResult] (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:55:23)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:30:12)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+From previous event:
+    at Query.run (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:44:12)
+    at retry (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:32)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:39:21
+    at retryAsPromised (D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:29:10)
+    at Promise.try.then.connection (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:14)
+From previous event:
+    at Sequelize.query (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:540:8)
+    at QueryInterface.select (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\query-interface.js:1099:27)
+    at Promise.try.then.then.then (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1598:34)
+    at runCallback (timers.js:785:20)
+    at tryOnImmediate (timers.js:747:5)
+    at processImmediate [as _immediateCallback] (timers.js:718:5)
+From previous event:
+    at Function.findAll (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1595:8)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:6:45)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getOpportunity (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:4:14)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/controllers/opportunity.js:3:24)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getList (D:\Keven Wang\koa\ordering\koa-react\server\controllers\opportunity.js:42:17)
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:45:18)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+  name: 'SequelizeDatabaseError',
+  parent: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  original: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' }
+[2018-02-07T16:50:43.473] [ERROR] default - { SequelizeDatabaseError: Table 'test.opportunities' doesn't exist
+    at Query.formatError (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:228:16)
+    at Query.connection.query [as onResult] (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:55:23)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:30:12)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+From previous event:
+    at Query.run (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:44:12)
+    at retry (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:32)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:39:21
+    at retryAsPromised (D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:29:10)
+    at Promise.try.then.connection (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:14)
+From previous event:
+    at Sequelize.query (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:540:8)
+    at QueryInterface.select (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\query-interface.js:1099:27)
+    at Promise.try.then.then.then (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1598:34)
+    at runCallback (timers.js:785:20)
+    at tryOnImmediate (timers.js:747:5)
+    at processImmediate [as _immediateCallback] (timers.js:718:5)
+From previous event:
+    at Function.findAll (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:1595:8)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:6:45)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getOpportunity (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:4:14)
+    at _callee$ (D:/Keven Wang/koa/ordering/koa-react/server/controllers/opportunity.js:3:24)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at getList (D:\Keven Wang\koa\ordering\koa-react\server\controllers\opportunity.js:42:17)
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:45:18)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+  name: 'SequelizeDatabaseError',
+  parent: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  original: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' },
+  sql: 'SELECT `id`, `customername`, `name`, `stage`, `address`, `industry`, `createdAt`, `updatedAt` FROM `Opportunities` AS `Opportunity`;' }
+[2018-02-07T16:51:03.856] [ERROR] default - { SequelizeDatabaseError: Table 'test.opportunities' doesn't exist
+    at Query.formatError (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:228:16)
+    at Query.connection.query [as onResult] (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:55:23)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:30:12)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+From previous event:
+    at Query.run (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:44:12)
+    at retry (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:32)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:39:21
+    at retryAsPromised (D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:29:10)
+    at Promise.try.then.connection (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:14)
+From previous event:
+    at Sequelize.query (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:540:8)
+    at QueryInterface.insert (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\query-interface.js:901:27)
+    at Promise.try.then.then.then (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:3642:56)
+    at runCallback (timers.js:785:20)
+    at tryOnImmediate (timers.js:747:5)
+    at processImmediate [as _immediateCallback] (timers.js:718:5)
+From previous event:
+    at model.save (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:3618:8)
+    at Function.create (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:2026:8)
+    at _callee2$ (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:15:39)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at addOpportunity (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:13:14)
+    at _callee2$ (D:/Keven Wang/koa/ordering/koa-react/server/controllers/opportunity.js:15:26)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at submit (D:\Keven Wang\koa\ordering\koa-react\server\controllers\opportunity.js:90:18)
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:45:18)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-router\lib\router.js:345:16
+  name: 'SequelizeDatabaseError',
+  parent: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'INSERT INTO `Opportunities` (`id`,`customername`,`name`,`address`,`industry`,`createdAt`,`updatedAt`) VALUES (DEFAULT,\'王友生\',\'王友生432\',\'江苏徐州泉山区\',\'it行业\',\'2018-02-07 08:51:03\',\'2018-02-07 08:51:03\');' },
+  original: 
+   { Error: Table 'test.opportunities' doesn't exist
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_SUCH_TABLE',
+     errno: 1146,
+     sqlState: '42S02',
+     sqlMessage: 'Table \'test.opportunities\' doesn\'t exist',
+     sql: 'INSERT INTO `Opportunities` (`id`,`customername`,`name`,`address`,`industry`,`createdAt`,`updatedAt`) VALUES (DEFAULT,\'王友生\',\'王友生432\',\'江苏徐州泉山区\',\'it行业\',\'2018-02-07 08:51:03\',\'2018-02-07 08:51:03\');' },
+  sql: 'INSERT INTO `Opportunities` (`id`,`customername`,`name`,`address`,`industry`,`createdAt`,`updatedAt`) VALUES (DEFAULT,\'王友生\',\'王友生432\',\'江苏徐州泉山区\',\'it行业\',\'2018-02-07 08:51:03\',\'2018-02-07 08:51:03\');' }
+[2018-02-07T16:55:14.204] [ERROR] default - { SequelizeDatabaseError: Field 'stage' doesn't have a default value
+    at Query.formatError (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:228:16)
+    at Query.connection.query [as onResult] (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:55:23)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:30:12)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+From previous event:
+    at Query.run (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\dialects\mysql\query.js:44:12)
+    at retry (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:32)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:39:21
+    at retryAsPromised (D:\Keven Wang\koa\ordering\koa-react\node_modules\retry-as-promised\index.js:29:10)
+    at Promise.try.then.connection (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:544:14)
+From previous event:
+    at Sequelize.query (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\sequelize.js:540:8)
+    at QueryInterface.insert (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\query-interface.js:901:27)
+    at Promise.try.then.then.then (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:3642:56)
+    at runCallback (timers.js:785:20)
+    at tryOnImmediate (timers.js:747:5)
+    at processImmediate [as _immediateCallback] (timers.js:718:5)
+From previous event:
+    at model.save (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:3618:8)
+    at Function.create (D:\Keven Wang\koa\ordering\koa-react\node_modules\sequelize\lib\model.js:2026:8)
+    at _callee2$ (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:15:39)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at addOpportunity (D:/Keven Wang/koa/ordering/koa-react/server/service/opportunity.js:13:14)
+    at _callee2$ (D:/Keven Wang/koa/ordering/koa-react/server/controllers/opportunity.js:15:26)
+    at tryCatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (D:\Keven Wang\koa\ordering\koa-react\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (D:\Keven Wang\koa\ordering\koa-react\node_modules\core-js\library\modules\_export.js:35:28)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12
+    at submit (D:\Keven Wang\koa\ordering\koa-react\server\controllers\opportunity.js:90:18)
+    at dispatch (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-compose\index.js:45:18)
+    at D:\Keven Wang\koa\ordering\koa-react\node_modules\koa-router\lib\router.js:345:16
+  name: 'SequelizeDatabaseError',
+  parent: 
+   { Error: Field 'stage' doesn't have a default value
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_DEFAULT_FOR_FIELD',
+     errno: 1364,
+     sqlState: 'HY000',
+     sqlMessage: 'Field \'stage\' doesn\'t have a default value',
+     sql: 'INSERT INTO `Opportunities` (`id`,`customername`,`name`,`address`,`industry`,`createdAt`,`updatedAt`) VALUES (DEFAULT,\'王友生\',\'王友生的商机\',\'江苏徐州泉山区\',\'it行业\',\'2018-02-07 08:55:14\',\'2018-02-07 08:55:14\');' },
+  original: 
+   { Error: Field 'stage' doesn't have a default value
+    at Packet.asError (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packets\packet.js:713:13)
+    at Query.Command.execute (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\commands\command.js:28:22)
+    at Connection.handlePacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:515:28)
+    at PacketParser.onPacket (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:94:16)
+    at PacketParser.executeStart (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\packet_parser.js:77:14)
+    at Socket.<anonymous> (D:\Keven Wang\koa\ordering\koa-react\node_modules\mysql2\lib\connection.js:102:29)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:264:12)
+    at readableAddChunk (_stream_readable.js:251:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:587:20)
+     code: 'ER_NO_DEFAULT_FOR_FIELD',
+     errno: 1364,
+     sqlState: 'HY000',
+     sqlMessage: 'Field \'stage\' doesn\'t have a default value',
+     sql: 'INSERT INTO `Opportunities` (`id`,`customername`,`name`,`address`,`industry`,`createdAt`,`updatedAt`) VALUES (DEFAULT,\'王友生\',\'王友生的商机\',\'江苏徐州泉山区\',\'it行业\',\'2018-02-07 08:55:14\',\'2018-02-07 08:55:14\');' },
+  sql: 'INSERT INTO `Opportunities` (`id`,`customername`,`name`,`address`,`industry`,`createdAt`,`updatedAt`) VALUES (DEFAULT,\'王友生\',\'王友生的商机\',\'江苏徐州泉山区\',\'it行业\',\'2018-02-07 08:55:14\',\'2018-02-07 08:55:14\');' }

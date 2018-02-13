@@ -13,3 +13,7 @@ export async function fetchListConfig(key) {
 export async function fetchEditConfig(key) {
   return request(`/api/system/edit-config/${key}`, { method: 'GET' });
 }
+
+export async function fetchDetailConfig(key) {
+  return request(`/api/system/detail-config/${key}`, { method: 'GET' });
+}

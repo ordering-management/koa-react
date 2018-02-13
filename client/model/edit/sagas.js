@@ -1,5 +1,6 @@
 import { takeEvery, put, call, select } from 'redux-saga/effects';
 import {
+  addTabs,
   fetchEditConfig
 } from '../../service/system';
 import {
@@ -32,5 +33,7 @@ function* submitEdit(action) {
     message.success('提交成功！');
     yield put({ type: 'system/tabRemove',
       payload: 'edit' + '/' + action.key });
+    // yield put({ type: 'detail/changeId', payload: selectedItems[selectedItems.length - 1].id });
+    // yield call(addTabs, { name: action.payload.title + activeTab.name, type: 'detail', key: activeTab.key });
   }
 }

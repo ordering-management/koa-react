@@ -3,23 +3,18 @@ async function getMenu(ctx) {
     status: '1',
     data: [{
       key: '1',
-      name: '首页',
+      name: '客户管理',
       iconType: 'dashboard',
       items: [
         {
           key: '2',
           type: 'list',
-          name: '分析页',
+          name: '客户报备',
         },
         {
           key: '3',
           type: 'list',
-          name: '监控页',
-        },
-        {
-          key: '4',
-          type: 'list',
-          name: '工作台',
+          name: '商机管理',
         }]
     }]
   }
@@ -68,17 +63,21 @@ async function getListConfigByKey(ctx) {
     3: {
       table_columns: [
         {
-          title: '姓名',
-          dataIndex: 'smingcheng',
-          width: 100,
-          fixed: 'left'
+          title: '商机名称',
+          dataIndex: 'name',
         },
         {
-          title: '手机号',
-          dataIndex: 'sshouji',
+          title: '客户名称',
+          dataIndex: 'customername',
         }, {
-          title: '会员角色',
-          dataIndex: 'hystatusname',
+          title: '客户地址',
+          dataIndex: 'address'
+        }, {
+          title: '商机阶段',
+          dataIndex: 'stage'
+        }, {
+          title: '行业',
+          dataIndex: 'industry',
         }],
       actions: [
         { title: '浏览', type: 'view' },
@@ -86,40 +85,8 @@ async function getListConfigByKey(ctx) {
         { title: '修改', type: 'edit' },
         { title: '审核', type: 'action', action: '/api/approve' }
       ],
-      source: '/api/customer'
+      source: '/api/opportunity'
     },
-    4: {
-      table_columns: [
-        {
-          title: '姓名',
-          dataIndex: 'smingcheng',
-          width: 100,
-          fixed: 'left'
-        },
-        {
-          title: '手机号',
-          dataIndex: 'sshouji',
-        }, {
-          title: '会员角色',
-          dataIndex: 'hystatusname',
-        }, {
-          title: '手机号',
-          dataIndex: 'sshouji',
-        }, {
-          title: '会员角色',
-          dataIndex: 'hystatusnam1e',
-        }, {
-          title: '手机号',
-          dataIndex: 'sshouji',
-        }, {
-          title: '会员角色',
-          dataIndex: 'hystatusn1ame',
-        }],
-      actions: [
-        { title: '审核', action: '/api/approve' }
-      ],
-      source: '/api/customer'
-    }
   };
   ctx.body = {
     status: '1',
@@ -171,20 +138,28 @@ async function getEditConfigByKey(ctx) {
       config: [
         [
           {
-            title: '姓名',
+            title: '商机名称',
             dataIndex: 'name',
           },
           {
-            title: '年龄',
-            dataIndex: 'age',
+            title: '客户名称',
+            dataIndex: 'customername',
           },
           {
-            title: '电话',
-            dataIndex: 'phone',
+            title: '客户地址',
+            dataIndex: 'address'
           },
+          {
+            title: '商机阶段',
+            dataIndex: 'stage'
+          },
+          {
+            title: '行业',
+            dataIndex: 'industry',
+          }
         ]
       ],
-      source: '/api/customer'
+      source: '/api/opportunity'
     }
   };
 
@@ -238,20 +213,28 @@ async function getDetailConfigByKey(ctx) {
       config: [
         [
           {
-            title: '姓名',
+            title: '商机名称',
             dataIndex: 'name',
           },
           {
-            title: '年龄',
-            dataIndex: 'age',
+            title: '客户名称',
+            dataIndex: 'customername',
           },
           {
-            title: '电话',
-            dataIndex: 'phone',
+            title: '客户地址',
+            dataIndex: 'address'
           },
+          {
+            title: '商机阶段',
+            dataIndex: 'stage'
+          },
+          {
+            title: '行业',
+            dataIndex: 'industry',
+          }
         ]
       ],
-      source: '/api/customer'
+      source: '/api/opportunity'
     }
   };
 

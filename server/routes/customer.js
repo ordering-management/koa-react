@@ -5,5 +5,6 @@ const router = new Router({ prefix: '/customer' });
 
 router.post('/', customer.getList);
 router.put('/:id', customer.submit);
+router.get('/:id', customer.getById);
 
 export default router;

@@ -19,3 +19,12 @@ export const addCustomer = async function (customer) {
     loggerError.error(error);
   }
 }
+
+export const getCustomerById = async function(id) {
+  try {
+    var result = await db.Customer.findById(id);
+    return result;
+  } catch (error) {
+    loggerError.error(error);
+  }
+}

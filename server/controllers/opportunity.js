@@ -1,6 +1,6 @@
-import { getCustomer, addCustomer, getCustomerById } from '../service/customer';
+import { getOpportunity, addOpportunity, getOpportunityById } from '../service/opportunity';
 async function getList(ctx) {
-  const result = await getCustomer();
+  const result = await getOpportunity();
   ctx.body = {
     status: '1',
     data: result
@@ -12,7 +12,7 @@ async function submit(ctx) {
   console.log(ctx.request.body);
   if (id === '-1') {
     //add customer
-    const result = await addCustomer(ctx.request.body);
+    const result = await addOpportunity(ctx.request.body);
     ctx.body = {
       status: '1',
       data: result
@@ -27,7 +27,7 @@ async function submit(ctx) {
 
 async function getById(ctx) {
   const id = ctx.params.id;
-  const result = await getCustomerById(id);
+  const result = await getOpportunityById(id);
   ctx.body = {
     status: '1',
     data: result

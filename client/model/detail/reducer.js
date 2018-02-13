@@ -9,7 +9,9 @@ export default (state = initState, action) => {
     case 'detail/changeId':
       return state.set('id', action.payload);
     case 'detail/changeDetailCache':
-      return state.set(action.payload.key, action.payload.config);
+      return state.set(action.payload.key, Map(action.payload.config));
+    case 'detail/changeDetailDataCache':
+      return state.update(action.payload.key, cache => cache.set('data', action.payload.data));
     default:
       return state;
   }

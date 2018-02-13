@@ -14,6 +14,9 @@ import {
   watchEditInit,
   watchSubmitEdit
 } from './model/edit/sagas';
+import {
+  watchDetailInit
+} from './model/detail/sagas';
 
 function* watchAndLog() {
   // eslint-disable-next-line
@@ -35,5 +38,6 @@ export default function* rootSaga() {
   yield fork(watchListActionClick);
   yield fork(watchEditInit);
   yield fork(watchSubmitEdit);
+  yield fork(watchDetailInit);
 // }
 }
