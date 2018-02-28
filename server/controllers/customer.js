@@ -1,3 +1,4 @@
+import Router from 'koa-router';
 import { getCustomer, addCustomer, getCustomerById } from '../service/customer';
 async function getList(ctx) {
   const result = await getCustomer();
@@ -34,8 +35,15 @@ async function getById(ctx) {
   }
 }
 
-export default {
-  getList,
-  submit,
-  getById
-}
+// export default {
+//   getList,
+//   submit,
+//   getById
+// }
+const router = new Router({ prefix: '/customer' });
+
+router.post('/', getList);
+router.put('/:id', submit);
+router.get('/:id', getById);
+
+export default router;

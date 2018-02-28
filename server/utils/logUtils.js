@@ -5,18 +5,15 @@ log4js.configure({
     error: {
       type: 'dateFile',
       filename: __dirname + '../../logs/log.log',
-      //filename: "blah.log",
       pattern: "-yyyy-MM-dd",
       maxLogSize: 1024 * 1024,
-      // "pattern": "-yyyy-MM-dd",
       alwaysIncludePattern: true,
-
       backups: 4,
     },
   },
-  categories: { default: { appenders: ['error'], level: 'error' } }
+  categories: { default: { appenders: ['error'], level: 'all' } }
 })
 
-var loggerError = log4js.getLogger();
+var logger = log4js.getLogger('default');
 
-export default loggerError;
+export default logger;

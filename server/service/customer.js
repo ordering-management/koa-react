@@ -3,7 +3,7 @@ import loggerError from '../utils/logUtils';
 
 export const getCustomer = async function () {
   try {
-    var customers = await db.Customer.findAll();
+    var customers = await db.customer.findAll();
   } catch (error) {
     loggerError.error(error);
   }
@@ -12,7 +12,7 @@ export const getCustomer = async function () {
 
 export const addCustomer = async function (customer) {
   try {
-    var result = await db.Customer.create(customer);
+    var result = await db.customer.create(customer);
     console.log(result);
     return result;
   } catch (error) {
@@ -22,7 +22,7 @@ export const addCustomer = async function (customer) {
 
 export const getCustomerById = async function(id) {
   try {
-    var result = await db.Customer.findById(id);
+    var result = await db.customer.findById(id);
     return result;
   } catch (error) {
     loggerError.error(error);

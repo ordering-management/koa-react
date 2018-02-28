@@ -1,17 +1,17 @@
-'use strict';
+/**
+ * Created by Administrator on 2018-02-26.
+ */
 module.exports = (sequelize, DataTypes) => {
-  var Opportunity = sequelize.define('opportunity', {
+  var ClientPartType = sequelize.define('client_part_type', {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    customername: DataTypes.STRING(250),
-    name: DataTypes.STRING(250),
-    stage: DataTypes.STRING(250),
-    address: DataTypes.STRING(250),
-    industry: DataTypes.STRING(250),
+    type: DataTypes.STRING(50),
+    detailTableName: DataTypes.STRING(100),
+    description: DataTypes.STRING(255),
   }, {
     classMethods: {
       associate: function(models) {
@@ -21,5 +21,5 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false
   });
-  return Opportunity;
+  return ClientPartType;
 };

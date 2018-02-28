@@ -1,3 +1,4 @@
+import Router from 'koa-router';
 import { getOpportunity, addOpportunity, getOpportunityById } from '../service/opportunity';
 async function getList(ctx) {
   const result = await getOpportunity();
@@ -34,8 +35,16 @@ async function getById(ctx) {
   }
 }
 
-export default {
-  getList,
-  submit,
-  getById
-}
+// export default {
+//   getList,
+//   submit,
+//   getById
+// }
+
+const router = new Router({ prefix: '/opportunity' });
+
+router.post('/', getList);
+router.put('/:id', submit);
+router.get('/:id', getById);
+
+export default router;

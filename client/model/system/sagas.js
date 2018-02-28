@@ -11,7 +11,21 @@ export const watchFetchMenu = function*() {
 function* fetchMenu(action) {
   const response = yield call(fetchMenuRequest);
   if (response.status === '1') {
-    yield put({ type: 'system/fetchMenuSuccess', payload: response.data });
+    const menus = [];
+    response.data.map((item) => {
+      item.key = item.id;
+      if (! item.parentId) {
+        menus.push(item);
+      } else {
+        response.data.map(parentItem => {
+          if (parentItem.id === item.parentId) {
+            parentItem.items = parentItem.items || [];
+            parentItem.items.push(item);
+          }
+        });
+      }
+    });
+    yield put({ type: 'system/fetchMenuSuccess', payload: menus });
   }
 }
 
